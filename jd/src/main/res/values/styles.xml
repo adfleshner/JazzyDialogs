@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Dialog Animations -->
+    <style name="DA_Fade">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="DA_SlideInFromTopWithBounce">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_top_bounce</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_top_bounce</item>
+    </style>
+    <style name="DA_SlideInFromTop">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_top</item>
+    </style>
+    <style name="DA_SlideInFromLeftOutRight">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+</resources>
