@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.Button;
 
+import com.flesh.jazzydialog.library.DA_DialogFragment;
+
 
 public class MainActivity extends Activity {
 
@@ -52,14 +54,14 @@ public class MainActivity extends Activity {
      */
     public static class PlaceholderFragment extends Fragment {
 
-       private Button btnFade, btnSIFTWB, btnSIFTWOB,btnInRightOutLeft;
+        private Button btnFade, btnSIFTWB, btnSIFTWOB, btnInRightOutLeft;
 
         public PlaceholderFragment() {
         }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             btnFade = (Button) rootView.findViewById(R.id.btnFade);
             btnSIFTWB = (Button) rootView.findViewById(R.id.btnSIFTWB);
@@ -75,34 +77,33 @@ public class MainActivity extends Activity {
             btnFade.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_Fade);
-                    mDialogFragment.show(getFragmentManager(),"TAG");
+                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_Fade, R.layout.dialog_layout);
+                    mDialogFragment.show(getFragmentManager(), "TAG");
                 }
             });
 
             btnSIFTWB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_SlideInFromTopWithBounce);
-                    mDialogFragment.show(getFragmentManager(),"TAG");
+                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_SlideInFromTopWithBounce, R.layout.dialog_layout);
+                    mDialogFragment.show(getFragmentManager(), "TAG");
                 }
             });
             btnSIFTWOB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_SlideInFromTop);
-                    mDialogFragment.show(getFragmentManager(),"TAG");
+                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_SlideInFromTop, R.layout.dialog_layout);
+                    mDialogFragment.show(getFragmentManager(), "TAG");
                 }
             });
 
             btnInRightOutLeft.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_SlideInFromLeftOutRight);
-                    mDialogFragment.show(getFragmentManager(),"TAG");
+                    DA_DialogFragment mDialogFragment = DA_DialogFragment.fragmentInstance(R.style.DA_SlideInFromLeftOutRight, R.layout.dialog_layout);
+                    mDialogFragment.show(getFragmentManager(), "TAG");
                 }
             });
-
 
 
         }
